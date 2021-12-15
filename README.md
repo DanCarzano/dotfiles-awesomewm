@@ -32,15 +32,6 @@ chmod +x install.sh
 - Compositor in use is Picom. Config is expected to be in .config/qtile/scripts/picom.conf
 - Picom fork in use is from https://github.com/jonaburg/picom
 
-# Qutebrowser
-
-![alt text](https://i.imgur.com/XI6OA89.png "Qutebrowser Screenshot")
-
-- Image shown on Qutebrowser is a custom startpage, check my Startpage repo if you would like this aswell
-- On line 84 in the config.py - Change "username" to your username in the file path
-- YouTube Advertisements have been blocked with my Qutebrowser config file
-- Status bar has been permanently disabled
-
 # Rofi
 
 ![alt text](https://i.imgur.com/rj0vGad.png "Rofi Screenshot")

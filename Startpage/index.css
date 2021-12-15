@@ -1,0 +1,100 @@
+body {
+    background-image: url('Digital.jpg');
+    margin: 0px;
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#search-field {
+    margin-bottom: 20px;
+    padding: 5px;
+}
+
+.container input[type=text] {
+    width: 25%;
+    height: 30px;
+    background-color: rgba(22, 22, 22);
+    color: #f2f2f2;
+    font-family: "Ubuntu Bold";
+    font-size: 16px;
+    border-radius: 25px;
+    border-style: solid;
+    border-color: #994C00;
+    text-align: center;   
+}
+
+.container input[type=text]:focus {
+    outline: none;
+}
+
+.inline {
+    display: inline-block;
+}
+
+.bookmark-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    overflow: hidden;
+    width: 65%;
+    margin: 1em 0em;
+    border-radius: 4px;
+    border-color: rgb(255, 0, 0);
+}
+
+.bookmark-set{
+    padding: 1em;
+    background-color: rgba(22, 22, 22);
+    border-radius: 25px;
+    border-style: double;
+    border-color: #880088;
+    font-family: "Ubuntu Bold";
+    font-size: 15px;
+    width: 25%;
+    height: 16em;
+    margin: 0em .5em;
+}
+.bookmark-inner-container {
+    overflow-y: hidden;
+    height: 80%;
+    vertical-align: top;
+}
+.bookmark-title {
+    font-family: "Impact";
+    font-size: 22px;
+    color: #994C00;
+}
+.bookmark {
+    text-decoration: none;
+    color: #8c8c8b;
+    display:block;
+    margin: .4em 0em;
+}
+.bookmark:hover {
+    color: #660066;
+}
+
+@media only screen and (max-width: 960px) {
+    .container {
+        height: auto;
+    }
+    #clock {
+        margin-top: 1em;
+    }
+    .container > .bookmark-container {
+        flex-direction: column;
+        width: 60%;
+    }
+    .bookmark-container > .bookmark-set {
+        width: auto;
+        margin: 1em 0em;
+    }
+}

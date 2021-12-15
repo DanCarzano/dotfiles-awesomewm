@@ -40,6 +40,14 @@ chmod +x install.sh
 - Font being used is Ubuntu Mono
 - Theme should be placed in /usr/share/rofi/themes
 
+# Startpage
+
+![alt text](https://i.imgur.com/9zm8HL7.png "Startpage Screenshot)
+
+- Custom built Startpage made with HTML, CSS and JS
+- Heading font is Impact, list font is Ubuntu
+- To use as default Startpage/Homepage, link the index.html file in your browsers settings
+
 # Kitty Terminal Emulator
 
 ![alt text](https://i.imgur.com/Xpip2Ms.png "Kitty Screenshot")

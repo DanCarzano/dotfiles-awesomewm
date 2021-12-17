@@ -13,26 +13,36 @@ body {
     flex-direction: column;
 }
 
-#search-field {
+#google-field {
+    margin-bottom: 20px;
+    padding: 5px;
+}
+
+#private-field {
     margin-bottom: 20px;
     padding: 5px;
 }
 
 .container input[type=text] {
-    width: 25%;
-    height: 30px;
+    width: 450px;
+    height: 25px;
     background-color: rgba(22, 22, 22);
     color: #f2f2f2;
     font-family: "Ubuntu Bold";
     font-size: 16px;
-    border-radius: 25px;
+    border-radius: 10px;
+    border-width: 2px;
     border-style: solid;
-    border-color: #994C00;
+    border-color: #663300;
     text-align: center;   
 }
 
 .container input[type=text]:focus {
     outline: none;
+}
+
+.container input[type=text]:focus::placeholder {
+    color: transparent;
 }
 
 .inline {
@@ -53,11 +63,12 @@ body {
 .bookmark-set{
     padding: 1em;
     background-color: rgba(22, 22, 22);
-    border-radius: 25px;
-    border-style: double;
+    border-radius: 20px;
+    border-width: 2px;
+    border-style: solid;
     border-color: #880088;
     font-family: "Ubuntu Bold";
-    font-size: 15px;
+    font-size: 16px;
     width: 25%;
     height: 16em;
     margin: 0em .5em;

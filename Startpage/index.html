@@ -14,7 +14,10 @@
 
     <div class="container">
 
-        <input id="search-field" type="text" name="search-field" placeholder="Type Here to Search...">
+        <div class="search-fields">
+            <input id="google-field" type="text" name="google-field" placeholder="Search Here With Google...">
+            <input id="private-field" type="text" name="private-field" placeholder="Search Here With Startpage...">
+        </div>
 
         <div class="bookmark-container">
             <div class="bookmark-set">
@@ -25,6 +28,7 @@
                     <a class="bookmark" href="https://wiki.archlinux.org/" target="_self">Arch Wiki</a>
                     <a class="bookmark" href="https://itsfoss.com/" target="_self">It's Foss</a>
                     <a class="bookmark" href="https://flathub.org/home" target="_self">Flathub</a>
+                    <a class="bookmark" href="https://www.linux.org" target="_self">Linux.org</a>
                 </div>
             </div>
 
@@ -35,37 +39,42 @@
                     <a class="bookmark" href="https://stackoverflow.com" target="_self">Stack Overflow</a>
                     <a class="bookmark" href="https://www.codecademy.com" target="_self">Codecademy</a>
                     <a class="bookmark" href="https://www.w3schools.com/" target="_self">W3 Schools</a> 
+                    <a class="bookmark" href="https://www.udemy.com" target="_self">Udemy</a>
                 </div>
             </div>
 
             <div class="bookmark-set">
                 <div class="bookmark-title">Entertainment</div>
                 <div class="bookmark-inner-container">
-                    <a class="bookmark" href="https://reddit.com" target="_self">Reddit</a>
                     <a class="bookmark" href="https://youtube.com" target="_self">YouTube</a>
                     <a class="bookmark" href="https://www.netflix.com" target="_self">Netflix</a>
                     <a class="bookmark" href="https://www.primevideo.com" target="_self">Prime Video</a>
+                    <a class="bookmark" href="https://www.crunchyroll.com" target="_self">Crunchyroll</a>
+                    <a class="bookmark" href="https://www.stan.com.au" target="_self">Stan</a>
                     <a class="bookmark" href="https://www.twitch.tv/" target="_self">Twitch TV</a>
                 </div>
             </div>
 
             <div class="bookmark-set">
-                <div class="bookmark-title">Search Engines</div>
+                <div class="bookmark-title">Socials</div>
                 <div class="bookmark-inner-container">
-                    <a class="bookmark" href="https://www.google.com" target="_self">Google</a>
-                    <a class="bookmark" href="https://www.startpage.com/?sc=UaBIUK7KRlYx20" target="_self">Startpage</a>
-                    <a class="bookmark" href="https://duckduckgo.com" target="_self">DuckDuckGo</a>
-                    <a class="bookmark" href="https://search.brave.com" target="_self">Brave Search</a>
+                    <a class="bookmark" href="https://reddit.com" target="_self">Reddit</a>
+                    <a class="bookmark" href="https://www.reddit.com/r/Fedora/" target="_self">r/Fedora</a>
+                    <a class="bookmark" href="https://www.reddit.com/r/linux/" target="_self">r/Linux</a>
+                    <a class="bookmark" href="https://www.reddit.com/r/unixporn/" target="_self">r/Unixporn</a>
+                    <a class="bookmark" href="https://www.reddit.com/r/Battlefield/" target="_self">r/Battlefield</a>
+                    <a class="bookmark" href="https://www.reddit.com/r/elderscrollsonline/" target="_self">r/ElderScrollsOnline</a>
+                    <a class="bookmark" href="https://facebook.com" target="_self">Facebook</a>
+                    <a class="bookmark" href="https://twitter.com/?lang=en" target="_self">Twitter</a>
                 </div>
             </div>
 
             <div class="bookmark-set">
-            <div class="bookmark-title">Other</div>
+            <div class="bookmark-title">General</div>
                 <div class="bookmark-inner-container">
-                    <a class="bookmark" href="https://amazon.com.au" target="_self">Amazon</a>
-                    <a class="bookmark" href="https://facebook.com" target="_self">Facebook</a>
-                    <a class="bookmark" href="https://twitter.com/?lang=en" target="_self">Twitter</a>
-                    <a class="bookmark" href="https://www.acs.org.au/" target="_self">ACS</a>
+                    <a class="bookmark" href="https://amazon.com.au" target="_self">Amazon Shopping</a>
+                    <a class="bookmark" href="https://www.gumtree.com.au" target="_self">Gumtree Marketplace</a>
+                    <a class="bookmark" href="https://www.acs.org.au/" target="_self">Aus Computer Society</a>
                     <a class="bookmark" href="https://www.hackthebox.eu/" target="_self">Hack The Box</a>
                     <a class="bookmark" href="https://overthewire.org/wargames/" target="_self">Over The Wire</a>
                 </div>
@@ -73,13 +82,20 @@
     </div>
 
     <script>
-        document.getElementById("search-field").addEventListener("keydown", event => {
-            if (event.keyCode === 13) {
-                var val = document.getElementById("search-field").value;
+        document.getElementById("google-field").addEventListener("keydown", event => {
+            if (event.keyCode == 13) {
+                var val = document.getElementById("google-field").value;
                 if (val == "gmail") {
                     window.open("https://mail.google.com", "_self");
                 } else
                 window.open("https://www.google.com/search?q=" + val + "&source=web", "_self");
+            }
+        });
+
+        document.getElementById("private-field").addEventListener("keydown", event => {
+            if (event.keyCode == 13) {
+                var pVal = document.getElementById("private-field").value;
+                window.open("https://www.startpage.com/search?query=" + pVal, "_self");
             }
         });
 

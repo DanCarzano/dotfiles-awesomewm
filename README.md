@@ -34,7 +34,7 @@ chmod +x install.sh
 
 # Rofi
 
-![alt text](https://i.imgur.com/rj0vGad.png "Rofi Screenshot")
+![alt text](https://i.imgur.com/Yv9JMtq.png "Rofi Screenshot")
 
 - Custom Rofi theme "Chrollo"
 - Font being used is Ubuntu Mono
@@ -61,7 +61,7 @@ chmod +x install.sh
 
 # Vim
 
-![alt text](https://i.imgur.com/7q7vHy2.png "Vim Screenshot")
+![alt text](https://i.imgur.com/VZBFmpP.png "Vim Screenshot")
 
 - This Vim config is more setup as a simple text editor rather than an IDE
 - Main changes are things like the status line being permanently shown, indenting, syntax highlighting and line numbers
@@ -69,7 +69,7 @@ chmod +x install.sh
 
 # Doom Emacs
 
-![alt text](https://i.imgur.com/yqPN9Cf.png "Emacs Screenshot")
+![alt text](https://i.imgur.com/OIFvc95.png "Emacs Screenshot")
 
 - Theme being used is 'doom-dracula, however background colour has been changed
 - Primary font is Ubuntu Mono

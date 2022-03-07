@@ -1,5 +1,5 @@
 body {
-    background-image: url('Digital.jpg');
+    background-image: url('Hex.jpg');
     margin: 0px;
     overflow: hidden;
 }
@@ -33,7 +33,7 @@ body {
     border-radius: 10px;
     border-width: 2px;
     border-style: solid;
-    border-color: #663300;
+    border-color: #880088;
     text-align: center;   
 }
 
@@ -81,7 +81,7 @@ body {
 .bookmark-title {
     font-family: "Impact";
     font-size: 22px;
-    color: #994C00;
+    color: #0000CC;
 }
 .bookmark {
     text-decoration: none;

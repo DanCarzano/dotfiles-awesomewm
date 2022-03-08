@@ -16,7 +16,7 @@
 
         <div class="search-fields">
             <input id="private-field" type="text" name="private-field" placeholder="Search Here With Startpage...">
-            <input id="google-field" type="text" name="google-field" placeholder="Search Here With Google...">
+            <input id="duck-field" type="text" name="duck-field" placeholder="Search Here With DuckDuckGo...">
         </div>
 
         <div class="bookmark-container">
@@ -60,11 +60,10 @@
                 <div class="bookmark-inner-container">
                     <a class="bookmark" href="https://reddit.com" target="_self">Reddit</a>
                     <a class="bookmark" href="https://www.reddit.com/r/Fedora/" target="_self">r/Fedora</a>
+                    <a class="bookmark" href="https://www.reddit.com/r/LibreWolf/" target="_self">r/LibreWolf</a>
                     <a class="bookmark" href="https://www.reddit.com/r/linux/" target="_self">r/Linux</a>
                     <a class="bookmark" href="https://www.reddit.com/r/unixporn/" target="_self">r/Unixporn</a>
-                    <a class="bookmark" href="https://www.reddit.com/r/Battlefield/" target="_self">r/Battlefield</a>
                     <a class="bookmark" href="https://www.reddit.com/r/elderscrollsonline/" target="_self">r/ElderScrollsOnline</a>
-                    <a class="bookmark" href="https://facebook.com" target="_self">Facebook</a>
                 </div>
             </div>
 
@@ -81,19 +80,22 @@
     </div>
 
     <script>
-        document.getElementById("google-field").addEventListener("keydown", event => {
+        document.getElementById("duck-field").addEventListener("keydown", event => {
             if (event.keyCode == 13) {
-                var val = document.getElementById("google-field").value;
+                var val = document.getElementById("duck-field").value;
                 if (val == "gmail") {
                     window.open("https://mail.google.com", "_self");
                 } else
-                window.open("https://www.google.com/search?q=" + val + "&source=web", "_self");
+                window.open("https://www.duckduckgo.com/?q=" + val, "_self");
             }
         });
 
         document.getElementById("private-field").addEventListener("keydown", event => {
             if (event.keyCode == 13) {
                 var pVal = document.getElementById("private-field").value;
+                if (pVal == "proton") {
+                    window.open("https://mail.protonmail.com/u/1/inbox", "_self");
+                } else
                 window.open("https://www.startpage.com/search?query=" + pVal, "_self");
             }
         });

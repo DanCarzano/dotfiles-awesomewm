@@ -47,7 +47,8 @@ chmod +x install.sh
 - Custom built Startpage made with HTML, CSS and JS
 - Heading font is Impact, list font is Ubuntu
 - To use as default Startpage/Homepage, link the index.html file in your browsers settings
-- Typing "gmail" into search field will open Google Mail in the same tab
+- Typing "proton" into Startpage search field will open Protonmail in the same tab
+- Typing "gmail" into DuckDuckGo search field will open Gmail in the same tab
 
 # Kitty Terminal Emulator
 

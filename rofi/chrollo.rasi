@@ -20,7 +20,7 @@
     selected-normal-background:  rgba ( 102, 0, 102, 33 % );
     border-color:                @foreground;
     spacing:                     1;
-    separatorcolor:              rgba ( 239, 97, 85, 18 % );
+    separatorcolor:              rgba ( 0, 0, 102, 75 % );
     urgent-background:           rgba ( 47, 30, 46, 15 % );
     selected-urgent-background:  rgba ( 129, 91, 164, 33 % );
     alternate-urgent-foreground: @urgent-foreground;
@@ -32,7 +32,7 @@
 window {
     background-color: @background;
     border:           1;
-    border-color:     #CC6600;
+    border-color:     #000099;
     padding:          0;
     font:             "Ubuntu Mono Regular 14";
     width:	      35%;

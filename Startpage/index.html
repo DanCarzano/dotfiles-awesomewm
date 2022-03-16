@@ -16,7 +16,7 @@
 
         <div class="search-fields">
             <input id="private-field" type="text" name="private-field" placeholder="Search Here With Startpage...">
-            <input id="duck-field" type="text" name="duck-field" placeholder="Search Here With DuckDuckGo...">
+            <input id="brave-field" type="text" name="brave-field" placeholder="Search Here With Brave Search...">
         </div>
 
         <div class="bookmark-container">
@@ -80,13 +80,13 @@
     </div>
 
     <script>
-        document.getElementById("duck-field").addEventListener("keydown", event => {
+        document.getElementById("brave-field").addEventListener("keydown", event => {
             if (event.keyCode == 13) {
-                var val = document.getElementById("duck-field").value;
+                var val = document.getElementById("brave-field").value;
                 if (val == "gmail") {
                     window.open("https://mail.google.com", "_self");
                 } else
-                window.open("https://www.duckduckgo.com/?q=" + val, "_self");
+                window.open("https://search.brave.com/search?q=" + val, "_self");
             }
         });
 

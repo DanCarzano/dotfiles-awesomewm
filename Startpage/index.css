@@ -13,7 +13,7 @@ body {
     flex-direction: column;
 }
 
-#duck-field {
+#brave-field {
     margin-bottom: 20px;
     padding: 5px;
 }
@@ -81,7 +81,7 @@ body {
 .bookmark-title {
     font-family: "Impact";
     font-size: 22px;
-    color: #0000CC;
+    color: #6200C4;
 }
 .bookmark {
     text-decoration: none;

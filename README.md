@@ -18,7 +18,7 @@ chmod +x install.sh
 
 # AwesomeWM - Darkness
 
-![alt text](https://i.imgur.com/VExRAD7.png "AwesomeWM Screenshot")
+![alt text](https://i.imgur.com/J4msGqt.png "AwesomeWM Screenshot")
 
 - This config is using FreeDesktop and a heavily modified version of the PowerArrow Theme
 - I suggest using XFCE as a base to install AwesomeWM, as this config is looking for a number of standard XFCE programs to function correctly
@@ -34,7 +34,7 @@ chmod +x install.sh
 
 # Rofi
 
-![alt text](https://i.imgur.com/Yv9JMtq.png "Rofi Screenshot")
+![alt text](https://i.imgur.com/oMHPFRN.png "Rofi Screenshot")
 
 - Custom Rofi theme "Chrollo"
 - Font being used is Ubuntu Mono
@@ -42,7 +42,7 @@ chmod +x install.sh
 
 # Startpage
 
-![alt text](https://i.imgur.com/i6ObcVv.png "Startpage Screenshot")
+![alt text](https://i.imgur.com/kRy0M8D.png "Startpage Screenshot")
 
 - Custom built Startpage made with HTML, CSS and JS
 - Heading font is Impact, list font is Ubuntu
@@ -52,7 +52,7 @@ chmod +x install.sh
 
 # Kitty Terminal Emulator
 
-![alt text](https://i.imgur.com/gAcoiNT.png "Kitty Screenshot")
+![alt text](https://i.imgur.com/VGbxCbe.png "Kitty Screenshot")
 
 - Custom oh-my-zsh Theme is included in the ZSH folder
 - Not much has really changed from the default Kitty config
@@ -62,7 +62,7 @@ chmod +x install.sh
 
 # Vim
 
-![alt text](https://i.imgur.com/VZBFmpP.png "Vim Screenshot")
+![alt text](https://i.imgur.com/YTsF43v.png "Vim Screenshot")
 
 - This Vim config is more setup as a simple text editor rather than an IDE
 - Main changes are things like the status line being permanently shown, indenting, syntax highlighting and line numbers

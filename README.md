@@ -68,9 +68,10 @@ chmod +x install.sh
 - Main changes are things like the status line being permanently shown, indenting, syntax highlighting and line numbers
 - No plugins are in use on this config
 
-# Doom Emacs
+# Geany
 
-![alt text](https://i.imgur.com/OIFvc95.png "Emacs Screenshot")
+![alt text](https://i.imgur.com/LgUhuZL.png "Geany Screenshot")
 
-- Theme being used is 'doom-dracula, however background colour has been changed
-- Primary font is Ubuntu Mono
+- Plugins in use are File Browser and Vimode
+- Primary font is Ubuntu Mono Regular
+- Theme is Delt Dark

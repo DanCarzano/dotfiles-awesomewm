@@ -16,22 +16,22 @@ local my_table = awful.util.table or gears.table -- 4.{0,1} compatibility
 local theme                                     = {}
 theme.dir                                       = os.getenv("HOME") .. "/.config/awesome/themes/powerarrow-blue"
 theme.font                                      = "DejaVu Sans Mono Bold 10"
-theme.taglist_font                              = "Font Awesome 5 Free Solid 14"
+theme.taglist_font                              = "Font Awesome 6 Brands Regular 16"
 theme.fg_normal                                 = "#ffffff"
 theme.fg_blue                                   = "#174DCB"
-theme.fg_magenta                                = "#6200C4"
+theme.fg_magenta                                = "#A0A0A0"
 theme.fg_focus                                  = "#6200C4"
 theme.fg_urgent                                 = "#b74822"
 theme.bg_normal                                 = "#111111"
-theme.bg_focus                                  = "#770077"
+theme.bg_focus                                  = "#111111"
 theme.bg_urgent                                 = "#3F3F3F"
-theme.taglist_fg_focus                          = "#000000"
+theme.taglist_fg_focus                          = "#6200C4"
 theme.tasklist_bg_focus                         = "#000000"
 theme.tasklist_fg_focus                         = "#CC6600"
 theme.border_width                              = 2
-theme.border_normal                             = "#000055"
-theme.border_focus                              = "#660066"
-theme.border_marked                             = "#330033"
+theme.border_normal                             = "#6200C4"
+theme.border_focus                              = "#CC00CC"
+theme.border_marked                             = "#CC00CC"
 theme.titlebar_bg_focus                         = "#3F3F3F"
 theme.titlebar_bg_normal                        = "#3F3F3F"
 theme.titlebar_bg_focus                         = theme.bg_focus
@@ -94,7 +94,7 @@ theme.titlebar_maximized_button_normal_active   = theme.dir .. "/icons/titlebar/
 theme.titlebar_maximized_button_focus_inactive  = theme.dir .. "/icons/titlebar/maximized_focus_inactive.png"
 theme.titlebar_maximized_button_normal_inactive = theme.dir .. "/icons/titlebar/maximized_normal_inactive.png"
 theme.bg_systray                                = "#111111"
-theme.clock_fontfg                              = "#990099"
+theme.clock_fontfg                              = "#8c8c8b"
 theme.clock_font                                = "DejaVu Sans Mono Bold 9"
 
 local markup = lain.util.markup
@@ -269,7 +269,13 @@ function theme.at_screen_connect(s)
         widget = wibox.widget.separator,
         orientation = "horizontal",
         forced_width = 10,
-        color = "#CC00CC",
+        color = "#6200C4",
+    }
+    
+    local fedora_logo = wibox.widget {
+		widget = wibox.widget.textbox,
+		text = "fedora",
+		font = "Font Awesome 6 Brands Regular 18"
     }
 
     -- Add widgets to the wibox
@@ -278,13 +284,15 @@ function theme.at_screen_connect(s)
         { -- Left widgets
             layout = wibox.layout.fixed.horizontal,
             --spr,
-            s.mytaglist,
+            wibox.container.background(wibox.container.margin(fedora_logo, 20, 15, 2, 5)),
+            vert_sep,
+            wibox.container.background(wibox.container.margin(clock, 6, 0, 2, 2)),
             s.mypromptbox,
             spr,
         },
         {
             layout = wibox.layout.align.horizontal,
-            wibox.container.background(wibox.container.margin(clock, 482, 0, 2, 2)),
+            wibox.container.background(wibox.container.margin(s.mytaglist, 526, 0, 2, 2)),
         },
         -- s.mytasklist, -- Middle widget
         { -- Right widgets

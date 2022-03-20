@@ -67,16 +67,17 @@ local altkey       = "Mod1"
 local modkey1      = "Control"
 
 -- personal variables
-local browser           = "firefox"
-local editor            = os.getenv("EDITOR") or "vim"
-local editorgui         = "gedit"
+local browser           = "flatpak run io.gitlab.librewolf-community"
+local editor            = os.getenv("EDITOR") or "geany"
+local editorgui         = "geany"
 local filemanager       = "chafa"
 local terminal          = "kitty"
 
 -- awesome variables
 awful.util.terminal = terminal
 -- Tagnames are relying on Font Awesome Free Pack
-awful.util.tagnames = { "  globe " , " code ", " cubes ", " file-word ", " folder-open ", " comment-dots ", " music ", " video ", " user-secret " }
+-- awful.util.tagnames = { "  globe " , " code ", " cubes ", " file-word ", " folder-open ", " comment-dots ", " music ", " video ", " user-secret " }
+awful.util.tagnames = { " react " , " react ", " react ", " react ", " react ", " react ", " react ", " react ", " react " }
 awful.layout.suit.tile.left.mirror = true
 awful.layout.layouts = {
     awful.layout.suit.tile,
@@ -195,8 +196,8 @@ globalkeys = my_table.join(
         {description = "rofi" , group = "hotkeys" }),
 
     -- My applications
-    awful.key({ modkey }, "e", function () awful.util.spawn("emacs") end,
-        {description = "doom emacs" , group = "applications" }),
+    awful.key({ modkey }, "e", function () awful.util.spawn("geany") end,
+        {description = "geany" , group = "applications" }),
         
     awful.key({ modkey }, "s", function () awful.util.spawn("flatpak run com.spotify.Client") end,
         {description = "spotify" , group = "applications" }),
@@ -214,13 +215,13 @@ globalkeys = my_table.join(
         {description = "gimp" , group = "applications" }),
 
     awful.key({ modkey }, "b", function () awful.util.spawn("flatpak run io.gitlab.librewolf-community") end,
-        {description = "firefox" , group = "applications" }),
+        {description = "librewolf" , group = "applications" }),
 
     awful.key({ modkey }, "p", function () awful.util.spawn("xfce4-screenshooter") end,
         {description = "screenshot" , group = "applications" }),
 
-    awful.key({ modkey }, "c", function () awful.util.spawn("flatpak run com.visualstudio.code") end,
-        {description = "vs-code" , group = "applications" }),
+    awful.key({ modkey }, "c", function () awful.util.spawn("emacs") end,
+        {description = "doom emacs" , group = "applications" }),
 
     awful.key({ modkey }, "l", function() awful.util.spawn("/opt/safing/portmaster/portmaster-start app") end,
         {description = "portmaster" , group = "applications" }),

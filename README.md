@@ -42,7 +42,7 @@ chmod +x install.sh
 
 # Startpage
 
-![alt text](https://i.imgur.com/Dch8ZRJ.png "Startpage Screenshot")
+![alt text](https://i.imgur.com/zsQjbSw.png "Startpage Screenshot")
 
 - Custom built Startpage made with HTML, CSS and JS
 - Heading font is Impact, list font is Ubuntu

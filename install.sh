@@ -2,13 +2,13 @@
 set -euo pipefail
 
 intro() {
-
     echo
     echo -e "Use the corresponding number to make a selection"
     echo
-    echo -e "\e[91m{1}    \e[32mMake backup of existing config"
-    echo -e "\e[91m{2}    \e[32mInstall new config"
-    echo -e "\e[91m{99}   \e[32mExit\e[0m"
+    echo -e "\e[91m{1}      \e[32mDownload + Install Programs"
+    echo -e "\e[91m{2}      \e[32mInstall Awesomewm - Darkness"
+    echo -e "\e[91m{3}      \e[32mInstall Awesomewm - Rust (Desktop Only)"
+    echo -e "\e[91m{99}     \e[32mExit\e[0m"
     echo
     read -p "Selection: " menuResponse
 
@@ -19,253 +19,177 @@ intro() {
 
     if [ "$menuResponse" == "1" ]
     then
-        backup
+        installPrograms
     fi
 
     if [ "$menuResponse" == "2" ]
     then
-        install
+        awesomeDarkness
     fi
+
+    if [ "$menuResponse" == "3" ]
+    then
+        awesomeRust
+    fi     
 }
 
-backup() {
+awesomeDarkness() {
 
     clear;
 
+    echo -e "You have selected to install Awesomewm - Darkness!"
+    echo -e "This includes the following config installs:"
+    echo -e "1. Awesomewm Darkness Desktop Theme"
+    echo -e "2. Kitty Terminal Emulator"
+    echo -e "3. Rofi"
+    echo -e "4. Vim"
+    echo -e "5. ZSH"
+    echo -e "6. Picom"
+    echo -e "7. Geany"
+    echo -e "8. Startpage"
+    echo -e "If existing configs are already in place, they will be renamed with a .old prefix"
+    echo -e "Do you wish to continue? (y/n)"
     echo
-    echo -e "Which existing config would you like to backup?"
-    echo
-    echo -e "\e[91m{1}    \e[32mQtile"
-    echo -e "\e[91m{2}    \e[32mAwesomeWM"
-    echo -e "\e[91m{3}    \e[32mNeofetch"
-    echo -e "\e[91m{4}    \e[32mQutebrowser"
-    echo -e "\e[91m{5}    \e[32mKitty"
-    echo -e "\e[91m{6}    \e[32mVimrc"
-    echo -e "\e[91m{00}   \e[32mReturn to main menu"
-    echo -e "\e[91m{99}   \e[32mExit\e[0m"
-    echo
-    read -p "Selection: " backupResponse
+    read -p "Selection: " darknessResponse
 
-    # Return to Main Menu
-    if [ "$backupResponse" == "00" ]
+    if [ "$darknessResponse" == "n" ]
     then
         intro
     fi
 
-    # Exit script
-    if [ "$backupResponse" == "99" ]
-    then
-        exit 1
-    fi
-
-    # Backup existing Qtile config
-    if [ "$backupResponse" == "1" ]
+    if [ "$darknessResponse" == "y" ]
     then
 
-        if [ -d "/home/$USER/.config/qtile" ]
-        then
-            #clear;
-            echo
-            echo -e "Qtile exists - Creating backup"
-            mv /home/$USER/.config/qtile ~/.config/qtile.backup
-            echo
-            echo -e "Backup created!"
-            echo -e "Returning to main menu"
-            intro
-        else
-            echo -e "Error: Qtile directory does not exist"
-            echo -e "Exiting script"
-        fi
-
-    fi
-
-    # Backup existing AwesomeWM config
-    if [ "$backupResponse" == "2" ]
-    then
+        echo -e "Checking for existing configs..."
 
         if [ -d "/home/$USER/.config/awesome" ]
         then
-            echo
-            echo -e "Awesome exists - Creating backup"
-            mv /home/$USER/.config/awesome ~/.config/awesome.backup
-            echo
-            echo -e "Backup successful!"
-            echo -e "Returning to main menu"
-            intro
-        else
-            echo -e "Error: Awesome directory does not exist"
-            echo -e "Exiting script"
+            mv /home/$USER/.config/awesome ~/.config/awesome.old
+            echo -e "Awesomewm config found, renamed to awesome.old"
         fi
-    fi
-
-    # Backup existing Neofetch config
-    if [ "$backupResponse" == "3" ]
-    then
-
-        if [ -d "/home/$USER/.config/neofetch" ]
-        then
-            echo
-            echo -e "Neofetch exists - Creating backup"
-            mv /home/$USER/.config/neofetch ~/.config/neofetch.backup
-            echo
-            echo -e "Backup successful!"
-            echo -e "Returning to main menu"
-            intro
-        else
-            echo -e "Error: Neofetch directory does not exist"
-            echo -e "Exiting script"
-        fi
-    fi
-
-    if [ "$backupResponse" == "4" ]
-    then
-
-        if [ -d "/home/$USER/.config/qutebrowser" ]
-        then
-            echo
-            echo -e "Qutebrowser config exists - Creating backup"
-            mv /home/$USER/.config/qutebrowser ~/.config/qutebrowser.backup
-            echo
-            echo -e "Backup successful!"
-            echo -e "Returning to main menu"
-            intro
-        else
-            echo -e "Error: Qutebrowser config.py does not exist"
-            echo -e "Exiting script"
-        fi
-    fi
-
-    if [ "$backupResponse" == "5" ]
-    then
 
         if [ -d "/home/$USER/.config/kitty" ]
         then
-            echo
-            echo -e "Kitty exists - Creating backup"
-            mv /home/$USER/.config/kitty ~/.config/kitty.backup
-            echo
-            echo -e "Backup successful!"
-            echo -e "Returning to main menu"
-            intro
-        else
-            echo -e "Error: Kitty directory does not exist"
-            echo -e "Exiting script"
+            mv /home/$USER/.config/kitty ~/.config/kitty.old
+            echo -e "Kitty config found, renamed to kitty.old"
         fi
-    fi
 
-    if [ "$backupResponse" == "6" ]
-    then
-
-        if [ -f "/home/$USER/.vimrc" ]
+        if [ -d "/home/$USER/.config/rofi" ]
         then
-            echo
-            echo -e ".vimrc exists - Creating backup"
-            mv /home/$USER/.vimrc ~/.vimrc.backup
-            echo
-            echo -e "Backup successful!"
-            echo -e "Returning to main menu"
-            intro
-        else
-            echo -e "Error: Vimrc file does not exist"
-            echo -e "Exiting script"
+            mv /home/$USER/.config/rofi ~/.config/rofi.old
+            echo -e "Rofi config found, renamed to rofi.old"
         fi
-    fi
-}
-
-install() {
-
-    clear;
-
-    echo
-    echo -e "Which config would you like to install?"
-    echo
-    echo -e "\e[91m{1}    \e[32mQtile"
-    echo -e "\e[91m{2}    \e[32mAwesomeWM"
-    echo -e "\e[91m{3}    \e[32mNeofetch"
-    echo -e "\e[91m{4}    \e[32mQutebrowser"
-    echo -e "\e[91m{5}    \e[32mKitty"
-    echo -e "\e[91m{6}    \e[32mVimrc"
-    echo -e "\e[91m{00}   \e[32mReturn to main menu"
-    echo -e "\e[91m{99}   \e[32mExit\e[0m"
-    echo
-    read -p "Selection: " installResponse
-
-    if [ "$installResponse" == "99" ]
-    then
-        exit 1
-    fi
-
-    if [ "$installResponse" == "00" ]
-    then
-        intro
-    fi
-
-    # Install Qtile config
-    if [ "$installResponse" == "1" ]
-    then
-        cp -r qtile/ ~/.config/
-        echo
-        echo -e "Qtile config installed successfully!"
-        echo -e "Returning to main menu"
-        intro
-    fi
-
-    # Install AwesomeWM config
-    if [ "$installResponse" == "2" ]
-    then
-        cp -r awesome/ ~/.config/
 
         if [ -d "/home/$USER/.config/picom" ]
         then
-            mv /home/$USER/.config/picom ~/.config/picom.backup
+            mv /home/$USER/.config/picom ~/.config/picom.old
+            echo -e "Picom config found, renamed to picom.old"
         fi
 
-        cp -r picom/ ~/.config/
+        if [ -d "/home/$USER/.config/geany" ]
+        then
+            mv /home/$USER/.config/geany ~/.config/geany.old
+            echo -e "Geany config found, renamed to geany.old"
+        fi
+
+        if [ -d "/home/$USER/Startpage" ]
+        then
+            mv /home/$USER/Startpage /home/$USER/Startpage.old
+            echo -e "Startpage found, renamed to Startpage.old"
+        fi
+
         echo
-        echo -e "AwesomeWM config installed successfully!"
-        echo -e "Returning to main menu"
+        echo
+        echo -e "Installing new config files..."
+        echo
+        cp -r awesome-darkness/ ~/.config/awesome
+        echo -e "Awesome - Darkness installed!"
+        cp -r kitty/ ~/.config/
+        echo -e "Kitty config installed!"
+        cp -r rofi/ ~/.config/
+        echo -e "Rofi config installed!"
+        cp vim/.vimrc /home/$USER/.vimrc
+        echo -e "Vimrc installed!"
+        cp zsh/.zshrc /home/$USER/.zshrc
+        cp zsh/chrollo.zsh-theme /home/$USER/.oh-my-zsh/themes/
+        echo -e "ZSH config installed!"
+        cp -r picom/ ~/.config/picom
+        echo -e "Picom config installed!"
+        cp -r geany/ ~/.config/geany
+        echo -e "Geany config installed!"
+        cp -r Startpage/ /home/$USER/
+        echo -e "Startpage installed!"
+    fi
+}
+
+awesomeRust() {
+
+    clear;
+
+    echo -e "You have selected to installed Awesomewm - Rust desktop theme!"
+    echo -e "This only includes the Awesomewm Rust Theme"
+    echo -e "If an existing config is already in place, it will be renamed with a .old prefix"
+    echo -e "Do you wish to continue? (y/n)"
+    echo
+    read -p "Selection: " rustResponse
+
+    if [ "$rustResponse" == "n" ]
+    then
         intro
     fi
 
-    # Install Neofetch config
-    if [ "$installResponse" == "3" ]
+    if [ "$rustResponse" == "y" ]
     then
-        cp -r neofetch/ ~/.config/
+
+        echo -e "Checking for existing config..."
+
+        if [ -d "/home/$USER/.config/awesome" ]
+        then
+            mv /home/$USER/.config/awesome ~/.config/awesome.old
+            echo -e "Awesomewm config found, renamed to awesome.old"
+        fi
+
         echo
-        echo -e "Neofetch config installed successfully!"
-        echo -e "Returning to main menu"
+        echo
+        echo -e "Installing new config files..."
+        echo
+        cp -r awesome-rust/ ~/.config/awesome
+        echo -e "Awesome - Rust installed!"
+    fi
+}
+
+installPrograms() {
+
+    clear;
+
+    echo -e "Select which distro you are using:"
+    echo -e "\e[91m{1}      \e[32mFedora    (dnf)"
+    echo -e "\e[91m{2}      \e[32mUbuntu    (apt)"
+    echo -e "\e[91m{3}      \e[32mArch      (pacman)"
+    echo -e "\e[91m{99}     \e[32mExit\e[0m"
+    echo
+    read -p "Selection: " distroResponse
+
+    if [ "$distroResponse" == "99" ]
+    then
         intro
     fi
 
-    # Install Qutebrowser config
-    if [ "$installResponse" == "4" ]
+    if [ "$distroResponse" == "1" ]
     then
-        cp -r qutebrowser/ ~/.config
-        echo
-        echo -e "Qutebrowser config installed successfully!"
-        echo -e "Returning to main menu"
-        intro
+        sudo dnf install awesome geany kitty picom rofi zsh
     fi
 
-    # Install Kitty config
-    if [ "$installResponse" == "5" ]
+    if [ "$distroResponse" == "2" ]
     then
-        cp kitty/ ~/.config
-        echo
-        echo -e "Kitty config installed successfully!"
-        echo -e "Returning to main menu"
-        intro
+        sudo apt install awesome geany kitty picom rofi zsh
     fi
 
-    # Install Vim config
-    if [ "$installResponse" == "6" ]
+    if [ "$distroResponse" == "3" ]
     then
-        cp vim/.vimrc /home/$USER/
-        echo
-        echo -e "Vim config installed successfully!"
-        echo -e "Returning to main menu"
-        intro
+        sudo pacman -S awesome geany kitty picom rofi zsh
     fi
+
 }
 
 intro

@@ -1,8 +1,8 @@
 # Install Instructions
 
-- Please note the install script is still in an alpha state
-- Currently the install script only supports the install of Qtile, AwesomeWM, Neofetch and Qutebrowser configs.
-- The install script DOES NOT install the actual programs, it only installs my configs hosted in this repo.
+- The install script has recently been updated to include the new configs, auto backup of existing config files and installation of necessary programs
+- Currently the install script does not support the installation of .vimrc and .zshrc. These still need to be installed manually
+- If any issues or bugs are found, please submit an issue and I will get to it ASAP!
 
 1. Clone respository to your computer and make the install script executable:
 ```
@@ -14,11 +14,11 @@ chmod +x install.sh
 ```
 ./install.sh
 ```
-3. Make sure you go through and backup existing directories. Use the backup section of the install script for this. 
+3. You will need to perform a logout after the installation is complete, be sure to load-in to Awesomewm upon login
 
 # AwesomeWM - Darkness
 
-![alt text](https://i.imgur.com/MA87V1G.png "AwesomeWM Screenshot")
+![alt text](https://i.imgur.com/Zl2rqXF.png "AwesomeWM Screenshot")
 
 - This config is using FreeDesktop and a heavily modified version of the PowerArrow Theme
 - I suggest using XFCE as a base to install AwesomeWM, as this config is looking for a number of standard XFCE programs to function correctly
@@ -34,7 +34,7 @@ chmod +x install.sh
 
 # Rofi
 
-![alt text](https://i.imgur.com/2gCwLAd.png "Rofi Screenshot")
+![alt text](https://i.imgur.com/zCJh5SS.png "Rofi Screenshot")
 
 - Custom Rofi theme "Chrollo"
 - Font being used is Ubuntu Mono
@@ -42,7 +42,7 @@ chmod +x install.sh
 
 # Startpage
 
-![alt text](https://i.imgur.com/zsQjbSw.png "Startpage Screenshot")
+![alt text](https://i.imgur.com/WD3RiFx.png "Startpage Screenshot")
 
 - Custom built Startpage made with HTML, CSS and JS
 - Heading font is Impact, list font is Ubuntu
@@ -50,9 +50,9 @@ chmod +x install.sh
 - Typing "proton" into Startpage search field will open Protonmail in the same tab
 - Typing "gmail" into Brave search field will open Gmail in the same tab
 
-# Kitty Terminal Emulator
+# Kitty Terminal Emulator - ZSH
 
-![alt text](https://i.imgur.com/6jLrB6Y.png "Kitty Screenshot")
+![alt text](https://i.imgur.com/uik7sKF.png "Kitty Screenshot")
 
 - Custom oh-my-zsh Theme is included in the ZSH folder
 - Not much has really changed from the default Kitty config
@@ -62,7 +62,7 @@ chmod +x install.sh
 
 # Vim
 
-![alt text](https://i.imgur.com/H9tIOBv.png "Vim Screenshot")
+![alt text](https://i.imgur.com/0L1itia.png "Vim Screenshot")
 
 - This Vim config is more setup as a simple text editor rather than an IDE
 - Main changes are things like the status line being permanently shown, indenting, syntax highlighting and line numbers
@@ -70,7 +70,7 @@ chmod +x install.sh
 
 # Geany
 
-![alt text](https://i.imgur.com/aWYJGpr.png "Geany Screenshot")
+![alt text](https://i.imgur.com/6OotqqH.png "Geany Screenshot")
 
 - Plugins in use are File Browser and Vimode
 - Primary font is Ubuntu Mono Regular

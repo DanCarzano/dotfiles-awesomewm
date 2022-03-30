@@ -25,15 +25,6 @@ chmod +x install.sh
 - Widget font is DejaVu Sans Mono Bold
 - The compositor in use is Picom, the config for this is expected to be found in .config/picom/picom.conf
 
-# AwesomeWM - Rust
-
-![alt text](https://i.imgur.com/GMZSt0x.png "AwesomeWM Screenshot")
-
-- This config is using FreeDesktop and a heavily modified version of the PowerArrow Theme
-- The taglist font is Font Awesome 6 Free Regular
-- Widget font is Ubuntu Mono Bold
-- The compositor in use is Picom, the config for this is expected to be found in .config/picom/picom.conf
-
 # Rofi
 
 ![alt text](https://i.imgur.com/zCJh5SS.png "Rofi Screenshot")

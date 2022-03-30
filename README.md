@@ -22,7 +22,7 @@ chmod +x install.sh
 
 - This config is using FreeDesktop and a heavily modified version of the PowerArrow Theme
 - The font to display icons on the bar is Font Awesome 6 Brands
-- Widget font is Deja Vu Sans Mono Bold
+- Widget font is DejaVu Sans Mono Bold
 - The compositor in use is Picom, the config for this is expected to be found in .config/picom/picom.conf
 
 # AwesomeWM - Rust
@@ -57,7 +57,7 @@ chmod +x install.sh
 
 - Custom oh-my-zsh Theme is included in the ZSH folder
 - Not much has really changed from the default Kitty config
-- Changed font size and font type
+- Font in use is DejaVu Sans Mono Bold
 - Changed background colour and added transparency - The blur effect is done with Picom
 - The Penguin image is drawn using Chafa from my .zshrc config
 

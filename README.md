@@ -21,7 +21,8 @@ chmod +x install.sh
 ![alt text](https://i.imgur.com/Zl2rqXF.png "AwesomeWM Screenshot")
 
 - This config is using FreeDesktop and a heavily modified version of the PowerArrow Theme
-- I suggest using XFCE as a base to install AwesomeWM, as this config is looking for a number of standard XFCE programs to function correctly
+- The font to display icons on the bar is Font Awesome 6 Brands
+- Widget font is Deja Vu Sans Mono Bold
 - The compositor in use is Picom, the config for this is expected to be found in .config/picom/picom.conf
 
 # AwesomeWM - Rust
@@ -29,16 +30,16 @@ chmod +x install.sh
 ![alt text](https://i.imgur.com/GMZSt0x.png "AwesomeWM Screenshot")
 
 - This config is using FreeDesktop and a heavily modified version of the PowerArrow Theme
-- I suggest using XFCE as a base to install AwesomeWM, as this config is looking for a number of standard XFCE programs to function correctly
+- The taglist font is Font Awesome 6 Free Regular
+- Widget font is Ubuntu Mono Bold
 - The compositor in use is Picom, the config for this is expected to be found in .config/picom/picom.conf
 
 # Rofi
 
 ![alt text](https://i.imgur.com/zCJh5SS.png "Rofi Screenshot")
 
-- Custom Rofi theme "Chrollo"
-- Font being used is Ubuntu Mono
-- Theme should be placed in /usr/share/rofi/themes
+- Rofi theme from Adi1090x with edited colours and fonts
+- Font being used is Ubuntu Mono Semi-Bold
 
 # Startpage
 

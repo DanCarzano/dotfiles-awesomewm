@@ -292,7 +292,7 @@ function theme.at_screen_connect(s)
         },
         {
             layout = wibox.layout.align.horizontal,
-            wibox.container.background(wibox.container.margin(s.mytaglist, 526, 0, 2, 2)),
+            wibox.container.background(wibox.container.margin(s.mytaglist, 530, 0, 2, 2)),
         },
         -- s.mytasklist, -- Middle widget
         { -- Right widgets

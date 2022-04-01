@@ -7,7 +7,6 @@ intro() {
     echo
     echo -e "\e[91m{1}      \e[32mDownload + Install Programs"
     echo -e "\e[91m{2}      \e[32mInstall Awesomewm - Darkness"
-    echo -e "\e[91m{3}      \e[32mInstall Awesomewm - Rust (Desktop Only)"
     echo -e "\e[91m{99}     \e[32mExit\e[0m"
     echo
     read -p "Selection: " menuResponse
@@ -26,11 +25,6 @@ intro() {
     then
         awesomeDarkness
     fi
-
-    if [ "$menuResponse" == "3" ]
-    then
-        awesomeRust
-    fi     
 }
 
 awesomeDarkness() {
@@ -119,42 +113,6 @@ awesomeDarkness() {
         echo -e "Geany config installed!"
         cp -r Startpage/ /home/$USER/
         echo -e "Startpage installed!"
-    fi
-}
-
-awesomeRust() {
-
-    clear;
-
-    echo -e "You have selected to installed Awesomewm - Rust desktop theme!"
-    echo -e "This only includes the Awesomewm Rust Theme"
-    echo -e "If an existing config is already in place, it will be renamed with a .old prefix"
-    echo -e "Do you wish to continue? (y/n)"
-    echo
-    read -p "Selection: " rustResponse
-
-    if [ "$rustResponse" == "n" ]
-    then
-        intro
-    fi
-
-    if [ "$rustResponse" == "y" ]
-    then
-
-        echo -e "Checking for existing config..."
-
-        if [ -d "/home/$USER/.config/awesome" ]
-        then
-            mv /home/$USER/.config/awesome ~/.config/awesome.old
-            echo -e "Awesomewm config found, renamed to awesome.old"
-        fi
-
-        echo
-        echo
-        echo -e "Installing new config files..."
-        echo
-        cp -r awesome-rust/ ~/.config/awesome
-        echo -e "Awesome - Rust installed!"
     fi
 }
 

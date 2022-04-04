@@ -44,13 +44,13 @@ chmod +x install.sh
 
 # Kitty Terminal Emulator - ZSH
 
-![alt text](https://i.imgur.com/uik7sKF.png "Kitty Screenshot")
+![alt text](https://i.imgur.com/wgyO4dY.png "Kitty Screenshot")
 
 - Custom oh-my-zsh Theme is included in the ZSH folder
 - Not much has really changed from the default Kitty config
 - Font in use is DejaVu Sans Mono Bold
 - Changed background colour and added transparency - The blur effect is done with Picom
-- The Penguin image is drawn using Chafa from my .zshrc config
+- Using iCat to render images in the terminal
 
 # Vim
 

@@ -18,7 +18,7 @@ chmod +x install.sh
 
 # AwesomeWM - Darkness
 
-![alt text](https://i.imgur.com/Zl2rqXF.png "AwesomeWM Screenshot")
+![alt text](https://i.imgur.com/MihFuXh.png "AwesomeWM Screenshot")
 
 - This config is using FreeDesktop and a heavily modified version of the PowerArrow Theme
 - The font to display icons on the bar is Font Awesome 6 Brands
@@ -27,14 +27,14 @@ chmod +x install.sh
 
 # Rofi
 
-![alt text](https://i.imgur.com/zCJh5SS.png "Rofi Screenshot")
+![alt text](https://i.imgur.com/roxkzJf.png "Rofi Screenshot")
 
 - Rofi theme from Adi1090x with edited colours and fonts
 - Font being used is Ubuntu Mono Semi-Bold
 
 # Startpage
 
-![alt text](https://i.imgur.com/WD3RiFx.png "Startpage Screenshot")
+![alt text](https://i.imgur.com/60j31pK.png "Startpage Screenshot")
 
 - Custom built Startpage made with HTML, CSS and JS
 - Heading font is Impact, list font is Ubuntu
@@ -44,11 +44,11 @@ chmod +x install.sh
 
 # Kitty Terminal Emulator - ZSH
 
-![alt text](https://i.imgur.com/wgyO4dY.png "Kitty Screenshot")
+![alt text](https://i.imgur.com/TzXOwje.png "Kitty Screenshot")
 
 - Custom oh-my-zsh Theme is included in the ZSH folder
 - Not much has really changed from the default Kitty config
-- Font in use is DejaVu Sans Mono Bold
+- Font in use is Ubuntu Mono Bold
 - Changed background colour and added transparency - The blur effect is done with Picom
 - Using iCat to render images in the terminal
 

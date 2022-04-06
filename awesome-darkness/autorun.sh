@@ -27,7 +27,7 @@ run light-locker
 run xcape -e 'Super_L=Super_L|Control_L|Escape'
 run thunar --daemon
 run pamac-tray
-/usr/libexec/polkit-gnome-authentication-agent-1
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 ## The following are not included in minimal edition by default
 ## but autorun.sh will pick them up if you install them

@@ -52,13 +52,13 @@ chmod +x install.sh
 - Changed background colour and added transparency - The blur effect is done with Picom
 - Using iCat to render images in the terminal
 
-# Vim
+# Neovim - Astrovim
 
-![alt text](https://i.imgur.com/0L1itia.png "Vim Screenshot")
+![alt text](https://i.imgur.com/YO7Fy8e.png "Nvim Screenshot")
 
-- This Vim config is more setup as a simple text editor rather than an IDE
-- Main changes are things like the status line being permanently shown, indenting, syntax highlighting and line numbers
-- No plugins are in use on this config
+- Using Astrovim as the Neovim configuration
+- Some minor edits to the default theme; Background colour, status line colour, tab line colour
+- Once nvim directory is placed in .config, run -> nvim +PackerSync
 
 # Geany
 

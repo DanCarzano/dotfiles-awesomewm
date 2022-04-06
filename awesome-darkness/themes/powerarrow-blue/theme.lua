@@ -274,7 +274,7 @@ function theme.at_screen_connect(s)
     
     local fedora_logo = wibox.widget {
 		widget = wibox.widget.textbox,
-		text = "fedora",
+		text = "linux",
 		font = "Font Awesome 6 Brands Regular 18"
     }
 

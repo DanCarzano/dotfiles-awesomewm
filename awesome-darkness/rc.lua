@@ -202,8 +202,8 @@ globalkeys = my_table.join(
     awful.key({ modkey }, "s", function () awful.util.spawn("flatpak run com.spotify.Client") end,
         {description = "spotify" , group = "applications" }),
 
-    awful.key({ modkey }, "f", function () awful.util.spawn("caja") end,
-        {description = "caja" , group = "applications" }),
+    awful.key({ modkey }, "f", function () awful.util.spawn("nemo") end,
+        {description = "nemo" , group = "applications" }),
 
     awful.key({ modkey }, "n", function () awful.util.spawn("flatpak run md.obsidian.Obsidian") end,
         {description = "obsidian" , group = "applications" }),
@@ -518,9 +518,6 @@ awful.rules.rules = {
     { rule = { class = "Xfce4-settings-manager" },
           properties = { floating = false } },
 
-    { rule = { type = "min" },
-          properties = { maximized = false } },
-
     -- Floating clients.
     { rule_any = {
         instance = {
@@ -644,8 +641,6 @@ awful.spawn.with_shell("~/.config/awesome/autorun.sh")
 awful.spawn.with_shell("/usr/lib/polkit-1/polkitd")
 awful.spawn.with_shell("nitrogen --restore")
 awful.spawn.with_shell("picom --config $HOME/.config/picom/picom.conf --experimental-backends")
-awful.spawn.with_shell("light-locker")
 awful.spawn.with_shell("nm-applet")
-awful.spawn.with_shell("volumeicon")
 awful.spawn.with_shell("xfsettingsd")
 awful.spawn.with_shell("xfce4-power-manager")

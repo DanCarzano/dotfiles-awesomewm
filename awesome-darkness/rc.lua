@@ -76,7 +76,6 @@ local terminal          = "kitty"
 -- awesome variables
 awful.util.terminal = terminal
 -- Tagnames are relying on Font Awesome Free Pack
--- awful.util.tagnames = { "  globe " , " code ", " cubes ", " file-word ", " folder-open ", " comment-dots ", " music ", " video ", " user-secret " }
 awful.util.tagnames = { " react " , " react ", " react ", " react ", " react ", " react ", " react ", " react ", " react " }
 awful.layout.suit.tile.left.mirror = true
 awful.layout.layouts = {
@@ -184,13 +183,6 @@ root.buttons(my_table.join(
 globalkeys = my_table.join(
 
     -- {{{ Personal keybindings
-    -- dmenu
-   -- awful.key({ altkey }, "space",
-   -- function ()
-   --     awful.spawn(string.format("dmenu_run",
-   --     beautiful.bg_normal, beautiful.fg_normal, beautiful.bg_focus, beautiful.fg_focus))
-   -- end,
-   -- {description = "show dmenu", group = "hotkeys"}),
 
     awful.key({ altkey }, "space", function () awful.util.spawn("/home/chrollo/.config/rofi/launchers/colorful/launcher.sh") end,
         {description = "rofi" , group = "hotkeys" }),
@@ -300,8 +292,6 @@ globalkeys = my_table.join(
               {description = "decrease the number of columns", group = "layout"}),
     awful.key({ modkey,           }, "space", function () awful.layout.inc( 1)                end,
               {description = "select next", group = "layout"}),
-    --awful.key({ modkey, "Shift"   }, "space", function () awful.layout.inc(-1)                end,
-             -- {description = "select previous", group = "layout"}),
 
     awful.key({ modkey, "Control" }, "n",
               function ()

@@ -1,3 +1,12 @@
+# NOTE:
+I am no longer running this config or AwesomeWM on any of my systems currently. This will mean the lack of updates tothis repository for the time being. I will be re-installing this on my test laptop but I have no time-frame on when this will happen. 
+
+The install script is still in a sub-par state, I do wish to clean this up still. 
+
+As far as I'm aware, there are no major issues with this config for AwesomeWM, if you do find this config is no longer usable, please submit an issue and I will look at updating it for any changes that may happen to AwesomeWM.
+
+Thanks for your understanding and patience for any updates!
+
 # Install Instructions
 
 - The install script has recently been updated to include the new configs, auto backup of existing config files and installation of necessary programs
